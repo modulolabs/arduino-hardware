@@ -50,7 +50,7 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (14u)
+#define PINS_COUNT           (12u)
 #define NUM_DIGITAL_PINS     (7u)
 #define NUM_ANALOG_INPUTS    (6u)
 #define NUM_ANALOG_OUTPUTS   (1u)
@@ -102,22 +102,13 @@ static const uint8_t A4  = PIN_A4 ;
 static const uint8_t A5  = PIN_A5 ;
 #define ADC_RESOLUTION		12
 
-// Other pins
-#define PIN_ATN              (38ul)
-static const uint8_t ATN = PIN_ATN;
-
 /*
  * Serial interfaces
  */
-// Serial (EDBG)
-#define PIN_SERIAL_RX       (31ul)
-#define PIN_SERIAL_TX       (30ul)
-#define PAD_SERIAL_TX       (UART_TX_PAD_2)
-#define PAD_SERIAL_RX       (SERCOM_RX_PAD_3)
 
 // Serial1
-#define PIN_SERIAL1_RX       (0ul)
-#define PIN_SERIAL1_TX       (1ul)
+#define PIN_SERIAL1_RX       (4ul)
+#define PIN_SERIAL1_TX       (5ul)
 #define PAD_SERIAL1_TX       (UART_TX_PAD_2)
 #define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
 
@@ -126,11 +117,11 @@ static const uint8_t ATN = PIN_ATN;
  */
 #define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MISO         (22u)
-#define PIN_SPI_MOSI         (23u)
-#define PIN_SPI_SCK          (24u)
+#define PIN_SPI_MISO         (2u)
+#define PIN_SPI_MOSI         (4u)
+#define PIN_SPI_SCK          (5u)
 
-static const uint8_t SS	  = PIN_A2 ;	// SERCOM4 last PAD is present on A2 but HW SS isn't used. Set here only for reference.
+static const uint8_t SS	  = PIN_A4 ;	// SERCOM0 last PAD is present on A2 but HW SS isn't used. Set here only for reference.
 static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
 static const uint8_t SCK  = PIN_SPI_SCK ;
@@ -140,15 +131,18 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (12u)
-#define PIN_WIRE_SCL         (13u)
+#define PIN_WIRE_SDA         (7u)
+#define PIN_WIRE_SCL         (8u)
+
+#define PERIPH_WIRE          sercom0
+#define WIRE_IT_HANDLER      SERCOM0_Handler
 
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (27ul)
-#define PIN_USB_DM          (28ul)
-#define PIN_USB_DP          (29ul)
+#define PIN_USB_HOST_ENABLE (9ul)
+#define PIN_USB_DM          (10ul)
+#define PIN_USB_DP          (11ul)
 
 #ifdef __cplusplus
 }
@@ -171,13 +165,12 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 
 extern SERCOM sercom0;
 extern SERCOM sercom1;
-extern SERCOM sercom2;
-extern SERCOM sercom3;
-extern SERCOM sercom4;
-extern SERCOM sercom5;
 
-extern Uart Serial;
+// Serial1 is the only hardware serial port exposed
 extern Uart Serial1;
+
+// Serial is the same as SerialUSB. (The virtual USB Serail Port)
+#define Serial SerialUSB
 
 #endif
 
@@ -196,13 +189,11 @@ extern Uart Serial1;
 //
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
 //                            pins are NOT connected to anything by default.
-#define SERIAL_PORT_USBVIRTUAL      SerialUSB
+#define SERIAL_PORT_USBVIRTUAL      Serial
 #define SERIAL_PORT_MONITOR         Serial
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
-#define WIRE_SERCOM sercom0
-#define WIRE_SERCOM_HANDLER SERCOM0_Handler
 
 #endif /* _VARIANT_ARDUINO_ZERO_ */
