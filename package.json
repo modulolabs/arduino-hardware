@@ -1,0 +1,54 @@
+{
+  "packages": [
+    {
+      "name": "modulo",
+      "maintainer": "Modulo Labs LLC",
+      "websiteURL": "http://www.modulo.co/",
+      "email": "erin@modulo.co",
+      "help": {
+        "online": "http://docs.modulo.co"
+      },
+      "platforms": [
+        {
+          "name": "Modulo Controller",
+          "architecture": "samd",
+          "version": "0.1",
+          "category": "Arduino",
+          "url": "https://github.com/modulolabs/arduino-hardware/archive/v0.1.tar.gz",
+          "archiveFileName": "arduino-hardware-0.1.tar.gz",
+          "checksum": "SHA-256:7c755376ed68d51652ff7c84cf98f852a339188518314dc84fbc190386b939b3",
+          "size": "5681",
+          "boards": [
+            {
+              "name": "Modulo Boards"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.6-arduino"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.9.0-arduino"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.0.0-atmel"
+            }
+          ]
+        }
+      ],
+      "tools": [
+      ]
+    }
+  ]
+}
