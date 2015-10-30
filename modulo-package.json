@@ -13,14 +13,14 @@
           "name": "Modulo Controller",
           "architecture": "samd",
           "version": "0.1",
-          "category": "Arduino",
+          "category": "Partner",
           "url": "https://github.com/modulolabs/arduino-hardware/archive/v0.1.tar.gz",
           "archiveFileName": "arduino-hardware-0.1.tar.gz",
           "checksum": "SHA-256:7c755376ed68d51652ff7c84cf98f852a339188518314dc84fbc190386b939b3",
           "size": "5681",
           "boards": [
             {
-              "name": "Modulo Boards"
+              "name": "Modulo Controller"
             }
           ],
           "toolsDependencies": [

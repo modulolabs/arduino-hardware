@@ -18,7 +18,7 @@ modulo_controller_arm.name=Modulo Controller (ARM)
 modulo_controller_arm.vid.0=0x16D0
 modulo_controller_arm.pid.0=0x0A67
 
-modulo_controller_arm.upload.tool=arduino:bossac
+modulo_controller_arm.upload.tool=arduino-beta:bossac
 modulo_controller_arm.upload.protocol=sam-ba
 modulo_controller_arm.upload.maximum_size=262144
 modulo_controller_arm.upload.use_1200bps_touch=true
@@ -30,7 +30,7 @@ modulo_controller_arm.build.f_cpu=48000000L
 modulo_controller_arm.build.usb_product="Modulo Controller"
 modulo_controller_arm.build.usb_manufacturer="Modulo Labs"
 modulo_controller_arm.build.board=MODULO_SAMD21
-modulo_controller_arm.build.core=arduino:arduino
+modulo_controller_arm.build.core=arduino-beta:arduino
 modulo_controller_arm.build.extra_flags=-D__SAMD21E18A__ {build.usb_flags}
 modulo_controller_arm.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 modulo_controller_arm.build.openocdscript=openocd_scripts/arduino_zero.cfg
