@@ -15,43 +15,6 @@
                     "version": "0.1", 
                     "architecture": "samd", 
                     "archiveFileName": "package_modulo_0.1.zip", 
-                    "size": "12178", 
-                    "toolsDependencies": [
-                        {
-                            "packager": "arduino", 
-                            "version": "4.8.3-2014q1", 
-                            "name": "arm-none-eabi-gcc"
-                        }, 
-                        {
-                            "packager": "arduino", 
-                            "version": "1.6-arduino", 
-                            "name": "bossac"
-                        }, 
-                        {
-                            "packager": "arduino", 
-                            "version": "0.9.0-arduino", 
-                            "name": "openocd"
-                        }, 
-                        {
-                            "packager": "arduino", 
-                            "version": "4.0.0-atmel", 
-                            "name": "CMSIS"
-                        }
-                    ], 
-                    "boards": [
-                        {
-                            "name": "Modulo Controller"
-                        }
-                    ]
-                }, 
-                {
-                    "category": "Partner", 
-                    "name": "Modulo Controller", 
-                    "url": "https://raw.githubusercontent.com/modulolabs/arduino-hardware/master/releases/package_modulo_0.2.zip", 
-                    "checksum": "SHA-256:3f113e3e0941d39724aeb0c5f0474884a98003e6b99ef9fc99b9437110a2e45d", 
-                    "version": "0.2", 
-                    "architecture": "samd", 
-                    "archiveFileName": "package_modulo_0.2.zip", 
                     "boards": [
                         {
                             "name": "Modulo Controller"
@@ -80,11 +43,97 @@
                         }
                     ], 
                     "size": "12178"
+                }, 
+                {
+                    "category": "Partner", 
+                    "name": "Modulo Controller", 
+                    "url": "https://raw.githubusercontent.com/modulolabs/arduino-hardware/master/releases/package_modulo_0.2.zip", 
+                    "checksum": "SHA-256:1a2cc18366f6deb1db90eca552adf52809fe0bde614f0a270d3cd2449d9adc5f", 
+                    "version": "0.2", 
+                    "architecture": "samd", 
+                    "archiveFileName": "package_modulo_0.2.zip", 
+                    "size": "12178", 
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino", 
+                            "version": "4.8.3-2014q1", 
+                            "name": "arm-none-eabi-gcc"
+                        }, 
+                        {
+                            "packager": "arduino", 
+                            "version": "1.6-arduino", 
+                            "name": "bossac"
+                        }, 
+                        {
+                            "packager": "arduino", 
+                            "version": "0.9.0-arduino", 
+                            "name": "openocd"
+                        }, 
+                        {
+                            "packager": "arduino", 
+                            "version": "4.0.0-atmel", 
+                            "name": "CMSIS"
+                        }
+                    ], 
+                    "boards": [
+                        {
+                            "name": "Modulo Controller"
+                        }
+                    ]
                 }
             ], 
             "tools": [], 
             "email": "erin@modulo.co", 
             "name": "modulo"
+        }, 
+        {
+            "maintainer": "Arduino Betatesting", 
+            "help": {
+                "online": "http://www.arduino.cc/en/Reference/HomePage"
+            }, 
+            "websiteURL": "http://www.arduino.cc/", 
+            "platforms": [
+                {
+                    "category": "Arduino", 
+                    "name": "Arduino SAMD core - Hourly build", 
+                    "url": "http://downloads.arduino.cc/Hourly/samd/package_samd-hourly-b27.tar.bz2", 
+                    "checksum": "SHA-256:209a8d65b61b5206886d021ffc711127c0586e16db05ba5db639ca014a39c42d", 
+                    "version": "9.9.9-Hourly", 
+                    "architecture": "samd", 
+                    "archiveFileName": "package_samd-hourly-b27.tar.bz2", 
+                    "boards": [
+                        {
+                            "name": "Arduino Zero"
+                        }
+                    ], 
+                    "toolsDependencies": [
+                        {
+                            "packager": "arduino", 
+                            "version": "4.8.3-2014q1", 
+                            "name": "arm-none-eabi-gcc"
+                        }, 
+                        {
+                            "packager": "arduino", 
+                            "version": "1.6-arduino", 
+                            "name": "bossac"
+                        }, 
+                        {
+                            "packager": "arduino", 
+                            "version": "0.9.0-arduino", 
+                            "name": "openocd"
+                        }, 
+                        {
+                            "packager": "arduino", 
+                            "version": "4.0.0-atmel", 
+                            "name": "CMSIS"
+                        }
+                    ], 
+                    "size": "178699"
+                }
+            ], 
+            "tools": [], 
+            "email": "packages@arduino.cc", 
+            "name": "arduino-beta"
         }
     ]
 }
