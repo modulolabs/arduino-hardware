@@ -14,30 +14,34 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-modulo_controller_arm.name=Modulo Controller (ARM)
-modulo_controller_arm.vid.0=0x16D0
-modulo_controller_arm.pid.0=0x0A67
+modulo_controller.name=Modulo Controller
+modulo_controller.vid.0=0x16d0
+modulo_controller.pid.0=0x0a67
+modulo_controller.vid.1=0x16d0
+modulo_controller.pid.1=0x0b58
 
-modulo_controller_arm.upload.tool=arduino-beta:bossac
-modulo_controller_arm.upload.protocol=sam-ba
-modulo_controller_arm.upload.maximum_size=262144
-modulo_controller_arm.upload.use_1200bps_touch=true
-modulo_controller_arm.upload.wait_for_upload_port=true
-modulo_controller_arm.upload.native_usb=true
+modulo_controller.upload.tool=arduino:bossac
+modulo_controller.upload.protocol=sam-ba
+modulo_controller.upload.maximum_size=262144
+modulo_controller.upload.use_1200bps_touch=true
+modulo_controller.upload.wait_for_upload_port=true
+modulo_controller.upload.native_usb=true
+modulo_controller.upload.vid=0x16d0
+modulo_controller.upload.pid=0x0a67
 
-modulo_controller_arm.build.mcu=cortex-m0plus
-modulo_controller_arm.build.f_cpu=48000000L
-modulo_controller_arm.build.usb_product="Modulo Controller"
-modulo_controller_arm.build.usb_manufacturer="Modulo Labs"
-modulo_controller_arm.build.board=MODULO_SAMD21
-modulo_controller_arm.build.core=arduino-beta:arduino
-modulo_controller_arm.build.extra_flags=-D__SAMD21E18A__ {build.usb_flags}
-modulo_controller_arm.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-modulo_controller_arm.build.openocdscript=openocd_scripts/arduino_zero.cfg
-modulo_controller_arm.build.variant=modulo_samd21
-modulo_controller_arm.build.variant_system_lib=
-modulo_controller_arm.build.vid=0x16D0
-modulo_controller_arm.build.pid=0x0A67
+modulo_controller.build.mcu=cortex-m0plus
+modulo_controller.build.f_cpu=48000000L
+modulo_controller.build.usb_product="Modulo Controller"
+modulo_controller.build.usb_manufacturer="Modulo Labs"
+modulo_controller.build.board=MODULO_CONTROLLER
+modulo_controller.build.core=arduino:arduino
+modulo_controller.build.extra_flags=-D__SAMD21E18A__ {build.usb_flags}
+modulo_controller.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+modulo_controller.build.openocdscript=openocd_scripts/arduino_zero.cfg
+modulo_controller.build.variant=modulo_samd21
+modulo_controller.build.variant_system_lib=
+modulo_controller.build.vid=0x16d0
+modulo_controller.build.pid=0x0b58
 
-modulo_controller_arm.bootloader.tool=openocd
-modulo_controller_arm.bootloader.file=zero/samd21_sam_ba.bin
+modulo_controller.bootloader.tool=openocd
+modulo_controller.bootloader.file=zero/samd21_sam_ba.bin
